@@ -1,12 +1,47 @@
 # Open Stats Engine
 
-A free engine that runs code written for Stata. Give it an unmodified do-file
-and its data, and it aims to produce the results the do-file's author got. It
-runs on a laptop, in CI and in a browser page, with nothing to buy or license.
+Open Stats Engine is a free engine for do-files written for Stata. Give it an
+unmodified do-file and its data, and it aims to reproduce the author's results
+on a laptop, in CI or in a
+[local browser workspace](https://github.com/CyberNative-AI/open-stats-engine/tree/main/web#readme).
 
-Open Stats Engine is an independent project. It is not affiliated with,
-endorsed by or sponsored by StataCorp LLC. Stata is a registered trademark of
-StataCorp LLC; we use the name only to say which language the engine reads.
+## Run from source
+
+From the repository root, use Python 3.11 or newer and a shell such as Bash.
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install \
+  numpy scipy pytest
+```
+
+The next block writes a CSV with the values 2, 4 and 6 and a do-file that
+summarizes them. `PYTHONPATH=engine` loads the engine from this checkout.
+
+```sh
+(
+  set -e
+  sample=$(mktemp -d)
+  printf 'x\n2\n4\n6\n' \
+    > "$sample/values.csv"
+  cat > "$sample/summary.do" <<'DO'
+import delimited "values.csv"
+summarize x
+DO
+  PYTHONPATH=engine \
+    .venv/bin/python -m ose run \
+    "$sample/summary.do" \
+    --cwd "$sample"
+)
+```
+
+In the `summarize x` output, the `x` row should show **3 observations**,
+**mean 4**, **standard deviation 2**, **min 2** and **max 6**.
+
+For your own run, replace the do-file path and set `--cwd` to the folder the
+do-file should use for relative data paths.
+
+## Limits and affiliation
 
 **Status: early.** Many commands are not built yet. Each one the engine lacks
 stops the run with "not implemented".
@@ -15,6 +50,10 @@ Data comes in from `.dta` files and from comma-separated files through
 `import delimited` and `insheet` ([what the reader does](docs/estimators/import-delimited.md)).
 The reader splits on commas only: a file with a tab or semicolon outside quotes
 stops with "not implemented" for now, and so does an integer that would lose digits.
+
+Open Stats Engine is an independent project. It is not affiliated with,
+endorsed by or sponsored by StataCorp LLC. Stata is a registered trademark of
+StataCorp LLC; we use the name only to say which language the engine reads.
 
 ## How we measure it
 
@@ -27,15 +66,7 @@ change to them carries a date and a reason.
 Anything the engine does not support stops with "not implemented". It never
 prints a guessed number.
 
-## Run from source
-
-Run these commands from the repository root (the folder holding this README)
-with Python 3.11 or newer.
-The virtual environment installs dependencies. `PYTHONPATH=engine` loads
-the engine directly from the source tree for this command.
-
-    python3 -m venv .venv && .venv/bin/pip install numpy scipy pytest
-    PYTHONPATH=engine .venv/bin/python -m ose run /path/to/FILE.do --cwd /path/to/DIR
+## Run tests and scores
 
 To run the unit tests or score the open cases, stay at the repository root.
 
