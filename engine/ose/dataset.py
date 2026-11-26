@@ -9,6 +9,9 @@ from .errors import StataError
 NUMERIC = ("byte", "int", "long", "float", "double")
 DEFAULT_FMT = {"byte": "%8.0g", "int": "%8.0g", "long": "%12.0g", "float": "%9.0g", "double": "%10.0g"}
 RANGE = {"byte": (-127, 100), "int": (-32767, 32740), "long": (-2147483647, 2147483620)}
+# Largest float magnitude: binary32 bits 0x7effffff. 0x7f000000 (2**127) and above
+# encode missing values in a .dta file.
+FLOAT_MAX = 1.7014117331926443e38
 
 
 def is_str(t):
@@ -29,7 +32,7 @@ def to_float32(a):
         out = a.astype(np.float32).astype(np.float64)
     if miss.any():
         out[miss] = a[miss]
-    over = (~miss) & (np.abs(out) > 1.7014117331926443e38)
+    over = (~miss) & (np.abs(out) > FLOAT_MAX)
     if over.any():
         out[over] = M.SYSMISS
     return out
@@ -42,7 +45,9 @@ def fits(a, t):
     if t == "double":
         return True
     if t == "float":
-        return bool(np.all(v.astype(np.float32).astype(np.float64) == v))
+        with np.errstate(over="ignore"):
+            exact = v.astype(np.float32).astype(np.float64) == v
+        return bool(np.all(exact & (np.abs(v) <= FLOAT_MAX)))
     lo, hi = RANGE[t]
     return bool(np.all((v == np.floor(v)) & (v >= lo) & (v <= hi)))
 

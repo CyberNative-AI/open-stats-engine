@@ -11,6 +11,11 @@ StataCorp LLC; we use the name only to say which language the engine reads.
 **Status: early.** Many commands are not built yet. Each one the engine lacks
 stops the run with "not implemented".
 
+Data comes in from `.dta` files and from comma-separated files through
+`import delimited` and `insheet` ([what the reader does](docs/estimators/import-delimited.md)).
+The reader splits on commas only: a file with a tab or semicolon outside quotes
+stops with "not implemented" for now, and so does an integer that would lose digits.
+
 ## How we measure it
 
 One number: the share of commands from published replication packages that
@@ -41,6 +46,15 @@ To score one case, which needs only that case's package, add its ID (the
 file name under `tests/cases/open/` without `.json`):
 
     .venv/bin/python harness/run.py --set open --case dv-HNPXO1-15_figure_a1
+
+The harness prints the aggregate score and writes it to `out/score.json`.
+Open `out/results.json` for per-command results. Exit code `0` means the
+harness completed, not that the case matched. For a one-case run,
+`cases_fully_matched: 1` means the scorer credited the whole case.
+`AMBIGUOUS` means the output matched, but the scorer could not read the
+command's echo in one of the two logs, so it cannot confirm which command
+produced that output; the command earns no credit. See the
+[matching rules](docs/matching-rules.md).
 
 Test cases are pointers, not files. The harness downloads each author's
 package from its archive at test time, checks its SHA-256 and keeps it in

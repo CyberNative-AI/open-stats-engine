@@ -128,3 +128,41 @@ Cases are JSON pointers (archive, DOI, file IDs, licence, hashes) in
 `tests/cases/<set>/`. Files are fetched at test time into a local cache
 (`$OSE_CACHE`, default `~/.cache/open-stats-engine`), never stored in git.
 `harness/run.py` writes the score file; dated scores are published separately.
+
+## 10. Imported decimals take the session's default type (2026-11-25)
+
+`import delimited` and `insheet` store a column with any non-integer value as
+the session's default numeric type: `float` (rounded) unless `set type double`
+is in effect, in which case `double`. This is the rule `generate` already uses.
+Integer columns keep the narrowest exact type; integers beyond `long` keep the
+earlier exact-`float`-else-`double` rule, which no published log witnesses yet.
+Decimals beyond the `float` range refuse under the default type.
+
+Evidence: PXAPMY (log 10539699, CSV 10539698) prints the final `zinb` log
+pseudolikelihood to 5 decimals. We fitted each storage choice with an
+independent NB2-plus-logit implementation (SciPy, not the engine). Each
+reference fit stopped at a local maximum: max |gradient| <= 2e-7 and a
+negative-definite Hessian. Under the previous rule (decimals `double`, `gen`
+`float`), the reference fit's log likelihood rounds below the printed value in
+model 1 (short by 9.6e-7) and model 12 (short by 1.9e-7). With decimals as
+`float`, the reference fits print the authors' digits in all 11 blocks they
+cover. With everything `double`, the reference fits also do; this is why
+`set type double` stays available. This is numerical evidence from local
+maxima, not a bound: we have no global upper bound for the zero-inflated
+likelihood, so a fit we did not find could in principle reach the printed
+values under the previous rule. MOAKFJ and ALS5GH cannot discriminate
+(decimals arrive through `destring`, or none exist). Limits: one reference
+implementation; model 12's margin needs it accurate to 1e-7. Reopen if a
+second independent fit moves either value across its interval, or a
+published log shows imported decimals with digits `float` cannot hold.
+
+Precision: `set type double` stores the nearest binary64 value, which holds
+15 to 17 significant decimal digits, not every digit a long decimal writes.
+The reader checks integer tokens against the type that stores them. `float`
+holds every integer up to 2^24 (16,777,216) and `double` up to 2^53
+(9,007,199,254,740,992). An integer token that writes a digit its stored value
+loses refuses in any notation: `9007199254740993` and `9.007199254740993e15`
+in any column, and `16777217` in a `float` column with decimals. A token such
+as `3.5e38`, whose written digits a `double` keeps, reads. `float` is chosen
+only inside its range (magnitude up to about 1.70141173e38); larger `float`
+encodings are missing values in a `.dta` file, so such integers stay `double`.
