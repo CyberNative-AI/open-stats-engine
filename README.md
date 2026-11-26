@@ -63,6 +63,17 @@ fetches every package on a first run, so it needs network and disk space.
 Log matching uses the wording table shipped at `harness/wording-table.tsv`;
 `score.json` names its hash under `wording_table`.
 
+## Report a run result
+
+If you tried an example or ran your own do-file, you can share the result in
+[GitHub Issues](https://github.com/CyberNative-AI/open-stats-engine/issues).
+Include the engine commit (`git rev-parse HEAD`), your Python version and
+operating system, the command or the smallest example you can share, and the
+output you saw or the first error. If it failed, say what you expected to
+happen. Use a small generated example in place of private data, remove
+personal paths and credentials from any log excerpt, and do not paste manual
+or help text (see the clean-room rules below).
+
 ## Layout
 
 - `engine/ose/` the engine (`lexer`, `macro`, `expr`, `syntax`, `interp`, `dta`, `fmt`, `commands/`)
