@@ -1,0 +1,46 @@
+{
+ "id": "dv-R7RYIV-table6and7",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/R7RYIV",
+  "version": "1.1",
+  "url": "https://doi.org/10.7910/DVN/R7RYIV",
+  "licence": "CC0 1.0 (dataset terms)",
+  "licence_note": "Sex ratio imbalance after WWII (Review of Economics and Statistics replication). Microdata are IPUMS International extracts: never stored in the tree, fetched at test time.",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "belarusf1999.dta",
+   "file_id": 2862790,
+   "original": false,
+   "sha256": "6e152e57e35264a24c5391319fdcfc08abb3c3bf725221118d2679b06b19330a"
+  },
+  {
+   "path": "ukrainef2001.dta",
+   "file_id": 2862810,
+   "original": false,
+   "sha256": "663857d85bed0efa0bcf51281bb4db3160631bc3af360bace372af570e0ef6fe"
+  },
+  {
+   "path": "sexratios_ussr.dta",
+   "file_id": 2862786,
+   "original": false,
+   "sha256": "48f0f1464ce7510bf6ae1efee8803c66062e9d86fdd22375e03a510c6ca2c8cc"
+  },
+  {
+   "path": "table6and7.do",
+   "file_id": 2862816,
+   "original": false,
+   "sha256": "94bba85ba9bbfd261d445aaf59f61349a940f6b0c6da0b6def745138006c6f64"
+  }
+ ],
+ "dofile": "table6and7.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 2862779,
+  "sha256": "9a1bca844fe8b3962c698c016a26f52d56073f98975a1022c04333ec3c4a380d"
+ },
+ "dirs": []
+}

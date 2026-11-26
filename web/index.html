@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Open stats engine · CyberNative</title>
+  <link rel="icon" href="atlas/mark-favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="atlas/tokens.css">
+  <link rel="stylesheet" href="workspace.css">
+  <script src="workspace.js" defer></script>
+</head>
+<body>
+  <header class="mast">
+    <div class="frame mast-inner">
+      <div class="signature">
+        <img src="atlas/mark-favicon.svg" alt="" width="32" height="32">
+        <span>CyberNative</span>
+      </div>
+      <span class="eyebrow">Browser workspace</span>
+    </div>
+  </header>
+  <main class="frame">
+    <header class="intro">
+      <h1>Open stats engine</h1>
+      <p>Run a do-file and read the results in your browser. Your code and files stay on this device.</p>
+    </header>
+    <div class="workbench">
+      <section class="input-sheet" aria-labelledby="input-title">
+        <div class="panel-head">
+          <h2 id="input-title">Do-file</h2>
+          <button id="run" class="run" type="button" disabled>Loading engine…</button>
+          <button id="stop" type="button" hidden>Stop run</button>
+        </div>
+        <div class="controls">
+          <div class="example-control">
+            <label for="example">Load an example</label>
+            <select id="example">
+              <option value="histogram">100 observations</option>
+              <option value="figure">Lake Tai · Figure A1</option>
+              <option value="baseline">Lake Tai · Table 2 (unsupported)</option>
+              <option value="own">Blank do-file</option>
+            </select>
+          </div>
+          <a id="view-log" href="#result-title" hidden>View results ↓</a>
+        </div>
+        <p id="startup-note" class="startup-note">The first load can take a minute or more on a slow connection.</p>
+        <div class="source" id="source" hidden>
+          <p id="source-note"></p>
+          <div class="source-links">
+            <a href="https://doi.org/10.7910/DVN/HNPXO1" rel="noreferrer">Replication archive</a>
+            <a href="examples/HNPXO1-LICENSE.txt" target="_blank" rel="noopener">Author’s license</a>
+          </div>
+        </div>
+        <div class="editor-frame">
+          <label class="editor-label" for="dofile">Do-file code</label>
+          <textarea id="dofile" rows="10" wrap="off" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="editor-help">set obs 100
+generate x = mod(_n, 10)
+replace x = x + 2 if _n > 50
+summarize x
+summarize x, detail
+histogram x, frequency bin(12)
+graph export x.svg</textarea>
+          <p id="editor-help">Edit this example or paste your own do-file.</p>
+        </div>
+        <div class="files">
+          <div id="drop">
+            <input class="visually-hidden" id="dataset" type="file" accept=".dta" multiple>
+            <label for="dataset">Choose .dta files</label>
+            <p>Or drop them here. Use their filenames in your do-file.</p>
+          </div>
+          <ul id="attachments" aria-label="Attached datasets" hidden></ul>
+          <p id="file-message" role="status"></p>
+        </div>
+      </section>
+      <section class="result" aria-labelledby="result-title">
+        <div class="panel-head">
+          <h2 id="result-title" tabindex="-1">Run log</h2>
+          <span id="timing" class="eyebrow" hidden></span>
+        </div>
+        <div id="run-state" class="run-state" role="status" data-state="loading">
+          <p id="state-title">Loading Python and SciPy</p>
+          <p id="state-detail">You can edit the do-file while the engine starts.</p>
+          <p id="state-previous" hidden></p>
+        </div>
+        <button id="retry" type="button" hidden>Retry engine startup</button>
+        <ul id="downloads" aria-label="CSV exports" role="list" hidden></ul>
+        <p id="log-hint" hidden>Scroll across the log to read all columns.</p>
+        <pre id="log" aria-label="Engine transcript" tabindex="0" hidden></pre>
+        <div id="plots" aria-label="Exported graphs" hidden></div>
+      </section>
+    </div>
+    <noscript><p>Turn on JavaScript to start the browser engine.</p></noscript>
+  </main>
+  <footer class="frame">Independent project; not affiliated with or endorsed by StataCorp LLC.</footer>
+</body>
+</html>

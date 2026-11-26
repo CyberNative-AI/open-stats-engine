@@ -1,0 +1,15 @@
+# Wording table for matching rules 2026-11-24.5, section 8. Shared DATA, not code: both scorers read this file.
+# Columns (tab-separated): id <TAB> regex <TAB> replacement <TAB> evidence
+# Applied to every output line of both sides before the headline token comparison. Never to strict layout.
+# Entry rules: (1) evidence = two logs from different Stata releases showing the same line template (same block, or for a
+# fixed-template line the same template printed by the same Stata routine) with equal numeric tokens; for an optional line one
+# log with it and one without; (2) regex and replacement hold no digit; the open harness test rewrites one sample line per
+# entry, and that line with a digit inserted at each position, and checks that the numeric tokens are unchanged (an entry
+# whose line never holds a number, such as merge-result-header, is checked by the inserted digits only); (3) entries come
+# from the open list only, never from held-out misses.
+# Evidence below: the open-list package R7RYIV (older release, table6and7.log) against the open-list package HNPXO1 (newer release).
+merge-result-header	^(\s*)Result\s+(?:#\s+of\s+obs\.|Number\s+of\s+obs)\s*$	\1Result Number of obs	R7RYIV table6and7.log `Result # of obs.` vs HNPXO1 logs `Result Number of obs`
+merge-not-matched	^(\s*)[Nn]ot matched\b	\1Not matched	R7RYIV table6and7.log `not matched` vs HNPXO1 logs `Not matched`
+merge-matched	^(\s*)[Mm]atched\b	\1Matched	R7RYIV table6and7.log `matched` vs HNPXO1 logs `Matched`
+append-note-prefix	^\(note: (variable \S+ was \S+, now \S+)	(\1	R7RYIV table6and7.log `(note: variable X was int, now float ...` vs HNPXO1 logs `(variable X was str9, now str24 ...`
+coef-table-titles-t	^(.*\| +)Coef\. +Std\. Err\.( +t +P>\|t\| +\[\S+ )Conf\. Interval\]\s*$	\1Coefficient  std. err.\2conf. interval]	3EDO2Y 3333327 and 27102 2497858 (old: Coef. Std. Err. ... Conf. Interval, 218 tables) vs HNPXO1 02_table2_baseline.log and 11 more HNPXO1 analysis logs (new: Coefficient std. err. ... conf. interval, 94 tables in the 12 logs); header line only, equal numeric tokens (95); re-read 2026-11-25

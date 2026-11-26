@@ -1,0 +1,14 @@
+Open Stats Engine
+Copyright 2026 CyberNative AI LLC
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+AI agents working for CyberNative AI LLC wrote nearly all of this software.
+Copyright protection for machine-written code may be limited.
+
+Open Stats Engine is independent of StataCorp LLC and is not affiliated with,
+endorsed by or sponsored by it. Stata is a registered trademark of StataCorp LLC.
+
+The browser workspace bundles fonts under the SIL Open Font License 1.1
+(web/atlas/LICENSE-*.txt). Test cases point to replication packages that keep
+their authors' licences; no author data or log is distributed with this product.

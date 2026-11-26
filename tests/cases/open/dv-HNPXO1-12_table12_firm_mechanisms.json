@@ -1,0 +1,40 @@
+{
+ "id": "dv-HNPXO1-12_table12_firm_mechanisms",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/HNPXO1",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/HNPXO1",
+  "licence": "Split terms, LICENSE.txt of the package: author do-files MIT (s.1); documentation, data compiled from public documents, intermediates generated from public inputs only, and the logs in output/ CC BY 4.0 (s.2); third-party data under their sources' terms (s.3); anonymised intermediates derived from restricted data and data/analytical/final.dta replication only, no redistribution (s.4). The archive-level CC0 does not override it. Per-file terms are under each file entry. Nothing from the package is stored in this repository.",
+  "licence_note": "",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "data/analytical/final.dta",
+   "file_id": 14443919,
+   "original": true,
+   "sha256": "1c02dbf68347e33b5d924d1197811606014dfefb3644ebca39202117da6533df",
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "path": "02_analysis/12_table12_firm_mechanisms.do",
+   "file_id": 14443973,
+   "original": false,
+   "sha256": "6de6f4cda7da311dcab167f3092bc9493c75cb5404d17e03b147e3db7ded00cf",
+   "terms": "MIT (LICENSE.txt s.1, author program files)"
+  }
+ ],
+ "dofile": "02_analysis/12_table12_firm_mechanisms.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 14443989,
+  "sha256": "72f17fb4505a78c68174601db9d23acb96f457e8cae4d26b7044dee7b233b1c2",
+  "terms": "CC BY 4.0 (LICENSE.txt s.2, author logs in output/)"
+ },
+ "dirs": [
+  "output/logs/02_analysis",
+  "output/tables"
+ ]
+}

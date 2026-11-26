@@ -1,0 +1,27 @@
+{
+ "id": "dv-HNPXO1-04_grp_d-reshape",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/HNPXO1",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/HNPXO1",
+  "licence": "LICENSE.txt: author do-file MIT (s.1), output log CC BY 4.0 (s.2), workbook third-party National Bureau of Statistics of China data (s.3), fetched only",
+  "retrieved": "2026-11-24"
+ },
+ "dofile": {
+  "path": "01_data_construction/04_grp_d.do",
+  "file_id": 14443932,
+  "sha256": "532b16aaac3e69b7c8f69e95f89e51af38384f92e91fde658142b34d52b23063"
+ },
+ "workbook": {
+  "path": "data/public_raw/Price Deflator/GRP_deflator.xlsx",
+  "file_id": 14443943,
+  "sha256": "c7835c9d795beacd9f0100d0dd6068bedbd249b11451cfb9552f6cc7ad44c324"
+ },
+ "expected_log": {
+  "path": "output/logs/01_data_construction/04_grp_d.log",
+  "file_id": 14443958,
+  "sha256": "681b5934afcf3e607fc7e3fe74bf8c0c991f78edd2c44a7e4db2a97aaeed2f4b"
+ }
+}

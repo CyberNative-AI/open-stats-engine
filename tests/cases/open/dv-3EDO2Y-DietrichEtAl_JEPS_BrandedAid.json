@@ -1,0 +1,34 @@
+{
+ "id": "dv-3EDO2Y-DietrichEtAl_JEPS_BrandedAid",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/3EDO2Y",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/3EDO2Y",
+  "licence": "CC0 1.0",
+  "licence_note": "",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "DietrichEtAl_JEPS_BrandedAid.dta",
+   "file_id": 3333325,
+   "original": true,
+   "sha256": "1b3311b756ac37e36cad7db94d2cada3044f7c4ed9038121e158e1596e6c0303"
+  },
+  {
+   "path": "DietrichEtAl_JEPS_BrandedAid.do",
+   "file_id": 3333324,
+   "original": false,
+   "sha256": "ca5aa06bbd4fb525deb5f597aac8ae260ec5b5a631125fd612a51f363584fce9"
+  }
+ ],
+ "dofile": "DietrichEtAl_JEPS_BrandedAid.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 3333327,
+  "sha256": "9363459c56bffec92550e309d210eccac12da75848936e8111d300a28de924fe"
+ },
+ "dirs": []
+}

@@ -1,0 +1,45 @@
+{
+ "id": "dv-HNPXO1-15_figure_a1",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/HNPXO1",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/HNPXO1",
+  "licence": "Split terms, LICENSE.txt of the package: author do-files MIT (s.1); documentation, data compiled from public documents, intermediates generated from public inputs only, and the logs in output/ CC BY 4.0 (s.2); third-party data under their sources' terms (s.3); anonymised intermediates derived from restricted data and data/analytical/final.dta replication only, no redistribution (s.4). The archive-level CC0 does not override it. Per-file terms are under each file entry. Nothing from the package is stored in this repository.",
+  "licence_note": "Replication package for a China Economic Review article on the Lake Tai basin. Data and do-files are fetched at test time, not stored in the tree.",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "data/analytical/final.dta",
+   "file_id": 14443919,
+   "original": true,
+   "sha256": "1c02dbf68347e33b5d924d1197811606014dfefb3644ebca39202117da6533df",
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "path": "02_analysis/15_figure_a1_distance_distribution.do",
+   "file_id": 14443903,
+   "original": false,
+   "sha256": "c5fcb74675192576d0d1386eb4c70249492bfe622e0797fcec6d779399944c20",
+   "terms": "MIT (LICENSE.txt s.1, author program files)"
+  }
+ ],
+ "dofile": "02_analysis/15_figure_a1_distance_distribution.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 14443947,
+  "sha256": "cdb61eb27106f56ab8bd1533f674ba3a3f68d304d3d5a8649ad45e8cad34bc75",
+  "terms": "CC BY 4.0 (LICENSE.txt s.2, author logs in output/)"
+ },
+ "produced_log": "output/logs/02_analysis/15_figure_a1_distance_distribution.log",
+ "dirs": [
+  "output/logs/01_data_construction",
+  "output/logs/02_analysis",
+  "output/figures",
+  "output/tables",
+  "data/analytical",
+  "data/intermediate"
+ ]
+}

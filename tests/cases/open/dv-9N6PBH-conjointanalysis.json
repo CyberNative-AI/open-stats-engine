@@ -1,0 +1,34 @@
+{
+ "id": "dv-9N6PBH-conjointanalysis",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/9N6PBH",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/9N6PBH",
+  "licence": "CC0 1.0 (Dataverse dataset licence)",
+  "licence_note": "",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "conjoint_all.dta",
+   "file_id": 13891994,
+   "original": false,
+   "sha256": "6f97b839ed953542134fb2b18565f4eb4adf1c2f7542a3af8012a79bc1e2cdaa"
+  },
+  {
+   "path": "conjointanalysis.do",
+   "file_id": 13891993,
+   "original": false,
+   "sha256": "a56bfca90a1643c4d1ee95deb000c0242a01b2856538f463e1c0c49c6b7ee810"
+  }
+ ],
+ "dofile": "conjointanalysis.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 13891995,
+  "sha256": "859da4ed6dd49d4b765d2d14484ce523b3b8524dddfd315144f1314b1006cac1"
+ },
+ "dirs": []
+}

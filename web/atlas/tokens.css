@@ -1,0 +1,112 @@
+/* CyberNative brand kit — web tokens. Object Atlas.
+ *
+ * The field is graphite: header, footer and the home page, where the work is shown as authored
+ * silver objects. Reading pages stay on a light silver sheet with graphite ink, because long reading
+ * and forms read better light. Pale blue is the one highlight on the field; on the sheet its deep cut
+ * marks links, focus and the action. The --wp-* names are kept from v2 so every existing page and the
+ * account surface re-render from these values without markup changes; the names say what a colour
+ * does, not what it is (--wp-cobalt is the field). The --oa-* names are the Object Atlas source
+ * values: the shared header and footer read only these, so a page palette cannot recolour them.
+ * Contrast (WCAG, measured): ink on sheet 15.92, muted on sheet 6.29 (panel 6.72), blue-deep on sheet
+ * 6.92, rust on sheet 6.09; paper on graphite 14.96, muted on graphite 8.81, blue on graphite 10.77.
+ */
+:root {
+  color-scheme: light;
+
+  /* Object Atlas source values */
+  --oa-ground: #151518;       /* graphite: the field */
+  --oa-ground-2: #1e1f23;     /* field shade: hover, raised plates */
+  --oa-paper: #e8e9e7;        /* paper: text on the field */
+  --oa-muted: #b2b4bd;        /* secondary text on the field     8.81:1 */
+  --oa-blue: #b2c8f0;         /* the highlight on the field      10.77:1 */
+  --oa-line: #3c3d45;         /* dividers on the field; never the only sign of meaning */
+  --oa-control: #7c7f8a;      /* control outlines on the field   4.56:1 */
+  --oa-sheet: #eff0ec;        /* the reading sheet */
+  --oa-blue-deep: #2d4f93;    /* links, focus and marks on the sheet  6.92:1 */
+  --oa-font-display: "CN Display", "CN Display Fallback", Arial, sans-serif;
+  --oa-font-body: "CN Text", "CN Text Fallback", Arial, sans-serif;
+
+  /* Surfaces */
+  --wp-paper: var(--oa-sheet);  /* the reading surface */
+  --wp-panel: #f7f7f5;        /* figures, tables, inputs */
+  --wp-ink: #151518;          /* text, rules, frames             15.92:1 on sheet */
+  --wp-muted: #55575f;        /* metadata, captions              6.29:1 on sheet, 6.72 on panel */
+  --wp-hair: #cfd1d6;         /* ledger lines only; never the only divider of meaning */
+
+  /* The field */
+  --wp-cobalt: var(--oa-ground);      /* the field: graphite      14.96:1 with paper */
+  --wp-cobalt-deep: var(--oa-ground-2);
+  --wp-pale: var(--oa-muted); /* metadata on the field           8.81:1 */
+
+  /* Meaning. Each colour has one job. */
+  --wp-bio: #151518;          /* the action on the sheet: a graphite plate, paper type 14.96:1 */
+  --wp-on-bio: var(--oa-paper); /* text on the action and on the field */
+  --wp-cited: #d9e3f5;        /* highlight behind a value that has a source (ink 14.11:1) */
+  --wp-flag: #e2e3df;         /* highlight behind a value that was left blank (ink 14.13:1) */
+  --wp-rust: #9a3b16;         /* flag text and the "Limit" label   6.09:1 on sheet */
+  --wp-link: var(--wp-ink);   /* inline links: ink, told apart by the blue-deep underline */
+  --wp-deep: var(--wp-cobalt);/* a field section; paper text 14.96:1 */
+  --wp-deep-label: var(--wp-pale);
+  --wp-focus: var(--oa-blue-deep); /* focus ring on the sheet, 6.92:1. Not a fill, not a label */
+  --wp-focus-field: var(--oa-blue); /* focus ring and action on the field, 10.77:1 */
+
+  /* Type: Syne for display, DM Sans for text, DM Mono for labels and values. */
+  --wp-font-display: "CN Display", "CN Display Fallback", Arial, sans-serif;
+  --wp-font-body: "CN Text", "CN Text Fallback", Arial, sans-serif;
+  --wp-font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --wp-text-hero: clamp(2.5rem, 5.6vw, 4.75rem);  /* one per page, lh .97, weight 500-600 */
+  --wp-text-title: clamp(1.875rem, 3.4vw, 3rem);  /* section title, lh 1.02 */
+  --wp-text-h3: 1.25rem;                          /* text cut 600, lh 1.3 */
+  --wp-text-lede: clamp(1.125rem, 1.6vw, 1.3125rem); /* lh 1.5 */
+  --wp-text-body: 1.0625rem;                      /* lh 1.6, never smaller for reading text */
+  --wp-text-ledger: 0.9375rem;                    /* tabular source values */
+  --wp-text-price: 2rem;                          /* service record prices */
+  --wp-text-meta: 0.875rem;                       /* short metadata only, < 40 chars */
+  --wp-text-cite: 0.8125rem;                      /* mono, cite chips and labels only */
+
+  /* Space: 4px base */
+  --wp-1: 0.25rem; --wp-2: 0.5rem; --wp-3: 0.75rem; --wp-4: 1rem; --wp-6: 1.5rem;
+  --wp-8: 2rem; --wp-12: 3rem; --wp-16: 4rem; --wp-24: 6rem; --wp-32: 8rem;
+
+  /* Shape */
+  --wp-rule: 1px;             /* ledger and table lines */
+  --wp-rule-strong: 2px;      /* section rules, figure frames */
+  --wp-radius: 4px;           /* inputs; figures and tables are square */
+  --wp-pill: 999px;           /* buttons: a rounded plate, as on the field */
+  --wp-page: 80rem;           /* 1280px */
+  --wp-measure: 66ch;
+  --wp-gutter: clamp(1.25rem, 3.4vw, 3rem);
+  --wp-tap: 48px;             /* minimum interactive height */
+}
+
+[data-edition="night"] {
+  color-scheme: dark;
+  --wp-paper: #0e1236;
+  --wp-panel: #161b4a;
+  --wp-ink: #f4efe3;
+  --wp-muted: #c9cdf2;
+  --wp-hair: #2c3370;
+  --wp-link: #c9cdf2;
+  --wp-cited: #1d2bc4;
+  --wp-flag: #5a2a14;
+  --wp-rust: #f0a27c;
+  --wp-focus: #ffd166;
+}
+
+/* v1.x aliases — delete once no stylesheet reads them. */
+:root, [data-edition="night"] {
+  --cn-color-canvas: var(--wp-paper);
+  --cn-color-panel: var(--wp-panel);
+  --cn-color-ink: var(--wp-ink);
+  --cn-color-muted: var(--wp-muted);
+  --cn-color-link: var(--wp-link);
+  --cn-color-leaf: var(--wp-pale);   /* v1 green chips and bars: ink sits on them */
+  --cn-color-leaf-strong: var(--wp-deep);
+  --cn-color-mint: var(--wp-cited);
+  --cn-color-amber: var(--wp-ink);   /* v1 decorative magenta shadows become ink, then go */
+  --cn-color-line: var(--wp-hair);
+  --cn-color-danger: var(--wp-rust);
+  --cn-offset: 0px;                  /* v1 offset shadows collapse to nothing */
+  --cn-offset-figure: 0px;
+}

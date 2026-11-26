@@ -1,0 +1,219 @@
+{
+  "chrome": {
+    "version": "157.0.8103.78",
+    "attempts": [
+      {
+        "cold_ms": 5560.2,
+        "first_load_body_bytes": 31670326,
+        "startup_requests": [
+          "/",
+          "/atlas/tokens.css",
+          "/atlas/mark-favicon.svg",
+          "/workspace.css",
+          "/workspace.js",
+          "/worker.js",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/atlas/mark-favicon.svg",
+          "/pyodide/pyodide.js",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          26.8,
+          8.1,
+          10.7,
+          7.8,
+          6.8
+        ],
+        "baseline_pss_bytes": 269757440,
+        "peak_pss_bytes": 640978944,
+        "figure_a1_match": [
+          6,
+          6
+        ],
+        "table_2_last_line": "** ose: unsupported: reghdfe"
+      },
+      {
+        "cold_ms": 5477,
+        "first_load_body_bytes": 31670326,
+        "startup_requests": [
+          "/",
+          "/atlas/tokens.css",
+          "/atlas/mark-favicon.svg",
+          "/workspace.css",
+          "/workspace.js",
+          "/worker.js",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/atlas/mark-favicon.svg",
+          "/pyodide/pyodide.js",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          21.5,
+          10.3,
+          12.5,
+          9.2,
+          13.4
+        ],
+        "baseline_pss_bytes": 271458304,
+        "peak_pss_bytes": 641515520
+      },
+      {
+        "cold_ms": 5363.3,
+        "first_load_body_bytes": 31670326,
+        "startup_requests": [
+          "/",
+          "/workspace.css",
+          "/atlas/tokens.css",
+          "/workspace.js",
+          "/atlas/mark-favicon.svg",
+          "/worker.js",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/pyodide/pyodide.js",
+          "/atlas/mark-favicon.svg",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          35.5,
+          8.6,
+          12.6,
+          7.7,
+          10.6
+        ],
+        "baseline_pss_bytes": 270587904,
+        "peak_pss_bytes": 625431552
+      }
+    ],
+    "median_warm_ms": 10.6
+  },
+  "firefox": {
+    "version": "158.0.1",
+    "attempts": [
+      {
+        "cold_ms": 7470,
+        "first_load_body_bytes": 31669403,
+        "startup_requests": [
+          "/",
+          "/workspace.js",
+          "/workspace.css",
+          "/atlas/tokens.css",
+          "/atlas/mark-favicon.svg",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/worker.js",
+          "/pyodide/pyodide.js",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          16,
+          7,
+          9,
+          7,
+          7
+        ],
+        "baseline_pss_bytes": 402149376,
+        "peak_pss_bytes": 1588994048,
+        "figure_a1_match": [
+          6,
+          6
+        ],
+        "table_2_last_line": "** ose: unsupported: reghdfe"
+      },
+      {
+        "cold_ms": 7148,
+        "first_load_body_bytes": 31669403,
+        "startup_requests": [
+          "/",
+          "/workspace.js",
+          "/workspace.css",
+          "/atlas/tokens.css",
+          "/atlas/mark-favicon.svg",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/worker.js",
+          "/pyodide/pyodide.js",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          15,
+          8,
+          7,
+          8,
+          7
+        ],
+        "baseline_pss_bytes": 402190336,
+        "peak_pss_bytes": 1543490560
+      },
+      {
+        "cold_ms": 6932,
+        "first_load_body_bytes": 31669403,
+        "startup_requests": [
+          "/",
+          "/atlas/tokens.css",
+          "/atlas/mark-favicon.svg",
+          "/workspace.css",
+          "/workspace.js",
+          "/atlas/DMSans-Text-Latin1-400-600.woff2",
+          "/atlas/Syne-Display-Latin1-500-700.woff2",
+          "/atlas/DMMono-Regular-Latin1.woff2",
+          "/worker.js",
+          "/pyodide/pyodide.js",
+          "/pyodide/pyodide-lock.json",
+          "/pyodide/python_stdlib.zip",
+          "/pyodide/pyodide.asm.js",
+          "/pyodide/pyodide.asm.wasm",
+          "/pyodide/numpy-2.2.5-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/pyodide/scipy-1.14.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl",
+          "/ose.zip"
+        ],
+        "warm_ms": [
+          14,
+          7,
+          7,
+          7,
+          9
+        ],
+        "baseline_pss_bytes": 403135488,
+        "peak_pss_bytes": 1506838528
+      }
+    ],
+    "median_warm_ms": 7
+  }
+}

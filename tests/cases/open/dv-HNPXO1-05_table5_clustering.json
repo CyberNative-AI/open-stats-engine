@@ -1,0 +1,39 @@
+{
+ "id": "dv-HNPXO1-05_table5_clustering",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/HNPXO1",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/HNPXO1",
+  "licence": "Split terms, LICENSE.txt of the package: author do-files MIT (s.1); documentation, data compiled from public documents, intermediates generated from public inputs only, and the logs in output/ CC BY 4.0 (s.2); third-party data under their sources' terms (s.3); anonymised intermediates derived from restricted data and data/analytical/final.dta replication only, no redistribution (s.4). The archive-level CC0 does not override it. Per-file terms are under each file entry. Nothing from the package is stored in this repository.",
+  "licence_note": "",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "path": "data/analytical/final.dta",
+   "file_id": 14443919,
+   "original": true,
+   "sha256": "1c02dbf68347e33b5d924d1197811606014dfefb3644ebca39202117da6533df",
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "path": "02_analysis/05_table5_clustering.do",
+   "file_id": 14443870,
+   "original": false,
+   "sha256": "817448af15f73d3867749447c339de4bd302817785cc998d36cd8a687fe0ca3a",
+   "terms": "MIT (LICENSE.txt s.1, author program files)"
+  }
+ ],
+ "dofile": "02_analysis/05_table5_clustering.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 14443909,
+  "sha256": "8a5ad7acc2f23e69291229be8e373e437a6dbf20c21fcfa95c031d23b598e965",
+  "terms": "CC BY 4.0 (LICENSE.txt s.2, author logs in output/)"
+ },
+ "dirs": [
+  "output/logs/02_analysis"
+ ]
+}

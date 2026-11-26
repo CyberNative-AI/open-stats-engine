@@ -1,0 +1,27 @@
+# Open list: packages engine builders may inspect. The held-out scorer treats every eligible package NOT listed
+# here as candidate held-out material. A package, once listed, stays.
+# Format: <archive>\t<persistent id>\t<date added>\t<why>
+dataverse	doi:10.7910/DVN/HNPXO1	2026-11-24	first vertical slice; all files and logs read
+dataverse	doi:10.7910/DVN/R7RYIV	2026-11-24	merge/append evidence (table6and7, table_appendix5and6). Dataset CC0 1.0; the .dta microdata are IPUMS International extracts, so pointer only, fetched at test time
+dataverse	doi:10.7910/DVN/3EDO2Y	2026-11-24	two-way tabulate evidence (chosen by command counts only: 18 two-way tab, 17 chi2, 14 row/col; no output text read before listing). CC0 1.0
+dataverse	doi:10.7910/DVN/27102	2026-11-24	two-way tabulate + chi2 cross-check (17 two-way tab, 12 chi2, counts only before listing). CC0 1.0
+dataverse	doi:10.7910/DVN/9N6PBH	2026-11-25	plain + clustered regress evidence (chosen by command counts only: 21 plain reg, 9 reg cluster; 3 files, 1 .dta; no output text read before listing). CC0 1.0
+dataverse	doi:10.7910/DVN/5T2U2K	2026-11-25	plain (unadjusted) regress evidence (chosen by command counts only, wrapped lines joined: 26 plain reg; 6 files, 1 Stata dataset; no output text read before listing). CC0 1.0
+dataverse	doi:10.7910/DVN/YL87YD	2026-11-25	merge, update with codes 4 and 5 both nonzero (replication.log); read 11-25
+dataverse	doi:10.7910/DVN/WV2UYI	2026-11-25	merge, update replace excerpt read 11-25 (census search for update tables)
+dataverse	doi:10.7910/DVN/FJL6VW	2026-11-25	merge update code 4/5 counts extracted 11-25 (census search)
+dataverse	doi:10.7910/DVN/QVBAZH	2026-11-25	merge, update excerpt and code counts read 11-25 (census search)
+dataverse	doi:10.7910/DVN/CJUWRL	2026-11-25	merge, update excerpt read 11-25 (census search)
+dataverse	doi:10.7910/DVN/GQOYSS	2026-11-25	merge, update excerpt read 11-25 (census search)
+dataverse	doi:10.7910/DVN/JBOGC9	2026-11-25	merge, update excerpt read 11-25 (census search)
+dataverse	doi:10.7910/DVN/7MYOFM	2026-11-25	eststo evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/LJXGBB	2026-11-25	eststo evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/51WMNS	2026-11-25	xtset evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/HWMZII	2026-11-25	xtset evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/PNRXXK	2026-11-25	tsset evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/3ZVRIQ	2026-11-25	tsset evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/MOAKFJ	2026-11-25	insheet evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/K60W5D	2026-11-25	insheet evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/ALS5GH	2026-11-25	import evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/QSUKIB	2026-11-25	import evidence (chosen by command counts only; no output read before listing)
+dataverse	doi:10.7910/DVN/AIZHJO	2026-11-25	logit robust/cluster evidence (chosen by command counts only; no output read before listing; outside the frozen pool)

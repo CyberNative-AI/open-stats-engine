@@ -1,0 +1,65 @@
+{
+ "source": "Harvard Dataverse doi:10.7910/DVN/HNPXO1 (version 1.0), authors' result tables in output/tables/, CC BY 4.0 under the package's LICENSE.txt s.2 (the archive-level CC0 does not override it); pointers and hashes only, fetched at test time, retrieved 2026-11-24",
+ "files": [
+  {
+   "target": "output/tables/table2_baseline.csv",
+   "file_id": 14443991,
+   "sha256": "e2a0cecc747adbced85daaacc0f94ee162db1bca103cd95ae0a9d80032417161"
+  },
+  {
+   "target": "output/tables/table3_concurrent_policies.csv",
+   "file_id": 14443905,
+   "sha256": "64027b83636c559803c395553bf5d97f9d6d8ca80292a4435bf41fd89457fe25"
+  },
+  {
+   "target": "output/tables/table6_alternative_outcomes.csv",
+   "file_id": 14443962,
+   "sha256": "9f22ded5866b96b44f29ccc0928b968d24dd11381776c9b35508804ffd96ba37"
+  },
+  {
+   "target": "output/tables/table7_sample_adjustment.csv",
+   "file_id": 14443915,
+   "sha256": "a0b1cbb834954110577e2bfd112ca04ad8853659a49ea5ffc1ea735c9aa7d60f"
+  },
+  {
+   "target": "output/tables/table9_ddd.csv",
+   "file_id": 14443979,
+   "sha256": "0764cf78c464e7bc06067eef774609c1853e4dc90e24bae4f7bd5c412bfcc205"
+  },
+  {
+   "target": "output/tables/table10a_industry.csv",
+   "file_id": 14443969,
+   "sha256": "a24c680600894c44bac0ca5d0eb683966b21cee95e83b808cb7fa3e1a9219a7a"
+  },
+  {
+   "target": "output/tables/table10b_coordination_complexity.csv",
+   "file_id": 14443948,
+   "sha256": "549427cedb76f9dba6fd7044ab512f5099cfbdc9337fffbc95a48672efbac251"
+  },
+  {
+   "target": "output/tables/table10c_regulatory_deterrence.csv",
+   "file_id": 14443906,
+   "sha256": "4c2ba5772006fd6ddcf72ac5e35de68097e7342ddd3decb2eeae845f967298da"
+  },
+  {
+   "target": "output/tables/table11a_political_binding.csv",
+   "file_id": 14443920,
+   "sha256": "fa7bf8dbc44b38785d0f9efd596bd3247fcfa968f946cf7d7ad4a9c80589e207"
+  },
+  {
+   "target": "output/tables/table11b_development_pressure.csv",
+   "file_id": 14443978,
+   "sha256": "1e23cc5e85b13e97fc144c0802719126dc82399dd51c1a83125b5dd0419604bc"
+  },
+  {
+   "target": "output/tables/table11c_regional_collaboration.csv",
+   "file_id": 14443847,
+   "sha256": "a7006376890e375f761045064bf95c3811b400350f19429d73523073650aab58"
+  },
+  {
+   "target": "output/tables/table12_firm_mechanisms.csv",
+   "file_id": 14443981,
+   "sha256": "1ee555f085397f4bcbcb41d8b0b45c29c0f76910085dff1687c8c9e6412e8dd4"
+  }
+ ]
+}

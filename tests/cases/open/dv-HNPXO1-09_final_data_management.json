@@ -1,0 +1,101 @@
+{
+ "id": "dv-HNPXO1-09_final_data_management",
+ "set": "open",
+ "source": {
+  "archive": "Harvard Dataverse",
+  "doi": "doi:10.7910/DVN/HNPXO1",
+  "version": "1.0",
+  "url": "https://doi.org/10.7910/DVN/HNPXO1",
+  "licence": "Split terms, LICENSE.txt of the package: author do-files MIT (s.1); documentation, data compiled from public documents, intermediates generated from public inputs only, and the logs in output/ CC BY 4.0 (s.2); third-party data under their sources' terms (s.3); anonymised intermediates derived from restricted data and data/analytical/final.dta replication only, no redistribution (s.4). The archive-level CC0 does not override it. Per-file terms are under each file entry. Nothing from the package is stored in this repository.",
+  "licence_note": "Author do-file, log and released intermediate data. The first eight merge tables use these files. Later commands include collapse, outside the combine implementation.",
+  "retrieved": "2026-11-24"
+ },
+ "files": [
+  {
+   "file_id": 14443972,
+   "sha256": "163e2940ff79a7a8787978d634abe498f99b9120b8688bcc51954f3dc6a0c928",
+   "path": "data/intermediate/02_CESD_CIED.dta",
+   "original": true,
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "file_id": 14443942,
+   "sha256": "34331d7ee324bb196271838caf1ebbd66c2387806cb237d8c3ac76d47f0e80c2",
+   "path": "data/intermediate/04_grp_d.dta",
+   "original": true,
+   "terms": "CC BY 4.0 (LICENSE.txt s.2, generated from public inputs)"
+  },
+  {
+   "file_id": 14469993,
+   "sha256": "b52043bce74f84fe1dc0b49a98aed2c4a15a07999553763686413df2faa3411d",
+   "path": "data/intermediate/03_ArcGIS_final.dta",
+   "original": true,
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "file_id": 14443996,
+   "sha256": "9a427322508e97d8b3c8c5eaf79cfd20acdf075dcd850c97e58c58e9899d0d76",
+   "path": "data/intermediate/09_keyriver.dta",
+   "original": true,
+   "terms": "CC BY 4.0 if this is the file LICENSE.txt s.2 names as data/intermediate/Keyriver.dta (compiled from public documents); the package file name differs, so not confirmed"
+  },
+  {
+   "file_id": 14443856,
+   "sha256": "bcac6fa2d2e18d22903266511c6d8296275d2d96c156f0da3570f0635f7bd4e1",
+   "path": "data/intermediate/10_court.dta",
+   "original": true,
+   "terms": "CC BY 4.0 if this is the file LICENSE.txt s.2 names as data/intermediate/court.dta (compiled from public documents); the package file name differs, so not confirmed"
+  },
+  {
+   "file_id": 14443923,
+   "sha256": "e929e2645fc53996312bb7f0e89dc2fdd6af6cf3400b48d272cad237d8a5d07c",
+   "path": "data/intermediate/05_party_secretary.dta",
+   "original": true,
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "file_id": 14443850,
+   "sha256": "1bcc28031ef71231d6888ca06e61f31c821255626c754dc3b389e2de7959401b",
+   "path": "data/intermediate/07_govreport.dta",
+   "original": true,
+   "terms": "CC BY 4.0 (LICENSE.txt s.2, generated from public inputs)"
+  },
+  {
+   "file_id": 14443917,
+   "sha256": "ce532d27039b0b4ba7e9552d45147e218b6605c3d4051f206e8c50f32d064d78",
+   "path": "data/intermediate/06_citydev.dta",
+   "original": true,
+   "terms": "CC BY 4.0 (LICENSE.txt s.2, generated from public inputs)"
+  },
+  {
+   "file_id": 14443876,
+   "sha256": "4c2f3c22ecfd98775d7d7e456af04270a938b9571952ccdc135fa57aadee2827",
+   "path": "data/intermediate/08_green_patent.dta",
+   "original": true,
+   "terms": "replication only, no redistribution (LICENSE.txt s.4, anonymised data derived from restricted sources)"
+  },
+  {
+   "file_id": 14443929,
+   "sha256": "7a629ce21f52e1e51a356dbb2317dd13f36b8810e1e631dc3889d07c57c2a7d6",
+   "path": "01_data_construction/09_final_data_management.do",
+   "original": false,
+   "terms": "MIT (LICENSE.txt s.1, author program files)"
+  }
+ ],
+ "dofile": "01_data_construction/09_final_data_management.do",
+ "cwd": ".",
+ "expected_log": {
+  "file_id": 14443849,
+  "sha256": "e62a7f75a517fce80001f936fbdd12b0b5bbdd4f9bf95ccb9cbdb375d5809f73",
+  "terms": "CC BY 4.0 (LICENSE.txt s.2, author logs in output/)"
+ },
+ "produced_log": "output/logs/01_data_construction/09_final_data_management.log",
+ "dirs": [
+  "output/logs/01_data_construction",
+  "output/logs/02_analysis",
+  "output/figures",
+  "output/tables",
+  "data/analytical",
+  "data/intermediate"
+ ]
+}
